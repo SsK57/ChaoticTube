@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChaoticTube</title>
+  <style>
+    /* ===== Body & Background ===== */
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(270deg, #ff0080, #7928ca, #00f5ff, #ffb700);
+      background-size: 800% 800%;
+      animation: gradientMove 15s ease infinite;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ===== Header ===== */
+    header h1 {
+      text-align: center;
+      font-size: 4rem;
+      text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff;
+      animation: glitchText 1s infinite;
+      margin-top: 30px;
+    }
+
+    @keyframes glitchText {
+      0% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; }
+      25% { text-shadow: -2px 2px #00ffff, 2px -2px #ff00ff; }
+      50% { text-shadow: 2px -2px #ff00ff, -2px 2px #00ffff; }
+      75% { text-shadow: -2px -2px #00ffff, 2px 2px #ff00ff; }
+      100% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; }
+    }
+
+    /* ===== Chaos Button ===== */
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .chaos-btn {
+      padding: 15px 30px;
+      font-size: 1.5rem;
+      border: 3px solid #fff;
+      border-radius: 10px;
+      background: #ff00ff;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .chaos-btn:hover {
+      transform: rotate(10deg) scale(1.1);
+      box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
+    }
+
+    /* ===== Floating Icons ===== */
+    .floating-icons {
+      position: fixed;
+      top: 0;
+      left: 0;
+      font-size: 2rem;
+      animation: floatIcons 10s linear infinite;
+    }
+
+    @keyframes floatIcons {
+      0% { transform: translate(0,0) rotate(0deg); }
+      50% { transform: translate(100vw, 50vh) rotate(180deg); }
+      100% { transform: translate(0,0) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ChaoticTube</h1>
+  </header>
+
+  <main>
+    <div class="button-container">
+      <button class="chaos-btn">Click Me!</button>
+    </div>
+  </main>
+
+  <div class="floating-icons">💥✨🎵🌀</div>
+</body>
+</html>
